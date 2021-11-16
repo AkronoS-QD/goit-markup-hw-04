@@ -246,7 +246,8 @@ p {
   background-color: var(--accent-color);
 }
 
-.button-primary:hover {
+.button-primary:hover,
+.button-primary:focus {
   color: var(--title-text-color);
   background-color: var(--primary-white-color);
 }
@@ -347,15 +348,13 @@ p {
 
 .staff-member {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
 }
-
 /*  -----------------------Социальные сети SVG-icon---------------------- */
 
 .list-team-network {
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
 }
 
 .list-team .network {
@@ -374,6 +373,7 @@ p {
   justify-content: center;
   align-items: center;
   fill: #afb1b8;
+  outline: none;
 }
 
 .network .icon {
@@ -382,7 +382,8 @@ p {
   height: 20px;
 }
 
-.network-link:hover {
+.network-link:hover,
+.network-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
@@ -419,15 +420,16 @@ p {
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
+  fill: #afb1b8;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
+  outline: none;
 }
 
 .company-link .icon {
   display: block;
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
 }
 
 .client .item {
@@ -439,10 +441,9 @@ p {
 }
 
 .company-link:hover,
-.company-link .icon:hover,
-.company-link .icon:focus {
+.company-link:focus {
+  border: 1px solid var(--accent-color);
   fill: var(--accent-color);
-  border-color: var(--accent-color);
 }
 
 /* -----------------------------------------main portfolio-------------------------------- */
@@ -455,19 +456,19 @@ p {
   text-align: center;
 }
 
-.filtr-our-product {
-  text-decoration: none;
-}
-
-/* кнопки portfolio */
+/* ------------кнопки portfolio------------------ */
 .btn-filtr {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
-.btn-filtr .btn.current {
+
+.btn-filtr .cursors.btn:hover,
+.btn-filtr .cursors.btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn-filtr .btn {
@@ -477,18 +478,7 @@ p {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-}
-
-.btn-filtr .btn:hover,
-.btn-filtr .btn:focus {
-  color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.btn-filtr .btn.current:hover,
-.btn-filtr .btn.current:focus {
-  background-color: var(--primary-white-color);
+  outline: none;
 }
 
 .btn-filtr .item + .item {
@@ -504,21 +494,31 @@ p {
   border: none;
 }
 
+/* ----------------------feature-list-------------------- */
+
 .feature-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.feature-list > .element:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.filtr-our-product {
+  display: block;
+  text-decoration: none;
 }
 
 .element {
+  outline: none;
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+.filtr-our-product:hover,
+.filtr-our-product:focus {
+  outline: none;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .element:nth-child(3n) {
@@ -559,10 +559,14 @@ p {
 /* ---------------------------------------footer info------------------------------------*/
 .info {
   display: flex;
-  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--background-color-accent);
+}
+
+.address-info {
+  float: left;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -604,6 +608,7 @@ p {
 }
 
 .footer-net {
+  float: left;
   margin-left: 70px;
 }
 
@@ -631,7 +636,6 @@ p {
 }
 
 .footer-network-list .network-link {
-  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -639,6 +643,7 @@ p {
   align-items: center;
   fill: #afb1b8;
   background-color: #ffffff1a;
+  outline: none;
 }
 
 .footer-network .icon {
@@ -647,7 +652,8 @@ p {
   height: 20px;
 }
 
-.network-link:hover {
+.network-link:hover,
+.network-link:focus {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
