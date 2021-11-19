@@ -149,6 +149,7 @@ p {
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
 }
+
 .icon-envelope {
   width: 16px;
   height: 12px;
@@ -564,8 +565,8 @@ p {
   background: var(--background-color-accent);
 }
 
-.address-info {
-  float: left;
+.footer-container {
+  display: flex;
   align-items: baseline;
 }
 
